@@ -6,6 +6,9 @@
 
 &emsp;&emsp;(其他支持待后续开发....)
 
+## 使用
+&emsp;&emsp;输出目录位于软件目录下
+
 ## 环境
 &emsp;&emsp;.Net 6.x
 
