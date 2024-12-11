@@ -324,8 +324,7 @@ namespace GalleryFormat.Format.Musica
 
             progress?.Report(new(ProgressValueType.AbsoluteCountAndReset, 1));
 
-            string dir = Path.Combine(MusicaImageFactory.OutputDirectory, DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss"));
-            dest.SaveAs(dir, "Single");
+            dest.SaveAs(MusicaImageFactory.OutputDirectory, DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss"));
 
             progress?.Report(new(ProgressValueType.Relative, 1));
 
