@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Reflection;
 using System.IO;
@@ -19,6 +20,15 @@ namespace GalleryViewerForm.Musica
         public MusicaForm()
         {
             InitializeComponent();
+
+            //用于Dispose释放调用
+            {
+                this.components ??= new Container();
+                IContainer container = this.components;
+
+                container.Add(this.mAniForm);
+                container.Add(this.mSqzForm);
+            }
 
             ListBox lb = this.lbFiles;
             lb.GetType().GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic)!.SetValue(lb, true);
